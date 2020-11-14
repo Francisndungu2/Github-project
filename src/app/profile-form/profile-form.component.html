@@ -1,1 +1,6 @@
-<p>profile-form works!</p>
+<form class="text-center  p-5" action="#!">
+    <div class="form-group">
+        <input type="text" [(ngModel)]='searchName' name="searchName" id="defaultContactFormName" class="form-control mb-4" placeholder="Enter-username" (click)="search">
+    </div>
+    <button class="btn btn-elegant btn-block" type="submit" (click)="search()">search</button>
+</form>
