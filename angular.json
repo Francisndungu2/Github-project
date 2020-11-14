@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "git": {
+    "Github-Api": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/git",
+            "outputPath": "dist/Github-Api",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -43,6 +39,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
+              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -50,13 +47,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -65,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "git:build"
+            "browserTarget": "Github-Api:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "git:build:production"
+              "browserTarget": "Github-Api:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "git:build"
+            "browserTarget": "Github-Api:build"
           }
         },
         "test": {
@@ -113,16 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "git:serve"
+            "devServerTarget": "Github-Api:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "git:serve:production"
+              "devServerTarget": "Github-Api:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "git"
+  "defaultProject": "Github-Api",
+  "cli": {
+    "analytics": "e25a876c-5b8d-426c-b86b-7d1933ab6e4c"
+  }
 }
