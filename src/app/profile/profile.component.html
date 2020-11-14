@@ -26,4 +26,9 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div class="row" *ngFor='let repo of repos'>
+            <div class="col pt-3">
+                <div class="card card-cascade wider reverse mt-3 repo">
+                    <div class="card-body elegant-color white-text rounded-bottom text-center">
+                        <h4 class="card-title"><strong>{{repo.name}}</strong></h4>
+                        <p class="">{{repo.description}}</p>
