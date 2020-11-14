@@ -1,1 +1,11 @@
-<p>profile works!</p>
+<div class="container">
+    <div class="">
+        <app-profile-form (searchUser)='performsearch($event)'></app-profile-form>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <div class="">
+                <div class="avatar mx-auto white">
+                    <img src="{{profile.avatar_url}}" class="rounded-circle" alt="woman avatar">
+                </div>
+            </div>
