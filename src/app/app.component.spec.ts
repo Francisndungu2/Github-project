@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'git'`, () => {
+  it(`should have as title 'Github-Api'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('git');
+    expect(app.title).toEqual('Github-Api');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('git app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('Github-Api app is running!');
   });
 });
